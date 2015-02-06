@@ -20,5 +20,10 @@
         echo "Database already exists.";
     }
     
+    $query = $connection->query("CREATE DATABASE posts ("
+            . "id int(11) NOT NULL AUTO_INCREMENT,"
+            . "title varchar(255) NOT NULL,"
+            . "post text NOT NULL,"
+            . "PRIMARY KEY (id))");
     
     $connection->close();
