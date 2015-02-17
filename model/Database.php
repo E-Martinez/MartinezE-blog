@@ -49,7 +49,7 @@ class Database {
     }
 
     public function query($string) {
-        $this->connection;
+        $this->openConnection();
 
         $query = $this->connection->query($string);
         
